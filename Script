@@ -1,0 +1,18 @@
+	workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS:findFirstChild('M9', true).ITEMPICKUP)
+	wait(0.1)
+	workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS:findFirstChild('Remington 870', true).ITEMPICKUP)
+	wait(0.1)
+	workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS:findFirstChild('AK-47', true).ITEMPICKUP)
+	for i, v in next, debug.getregistry() do 
+		if type(v) == "table" then 
+			if v.Bullets then 
+				v.AutoFire = true
+				v.FireRate = 0
+				v.Bullets = 20
+				v.Range = math.huge
+				v.MaxAmmo = math.huge
+				v.CurrentAmmo = math.huge
+				v.StoredAmmo = math.huge
+			end
+		end
+	end
